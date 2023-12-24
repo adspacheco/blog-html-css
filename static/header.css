@@ -1,5 +1,44 @@
-#header {
+.header-bg {
   background-color: #24292f;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  padding: 1rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header-menu {
+  display: flex;
+  gap: 2.5rem;
+}
+
+.header-menu a {
+  padding: 1rem 0;
+  color: #ffffff;
+  display: inline-block;
+  position: relative;
+}
+
+.header-menu a:after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0.125rem;
+  background-color: #ffffff;
+  margin-top: 0.25rem;
+  transition: width 0.3s ease-in-out;
+  position: absolute;
+}
+
+.header-menu a:hover:after {
+  width: 100%;
 }
 
 .logo {
@@ -11,4 +50,22 @@
 .logo span {
   color: #2da44e;
   font-weight: 900;
+}
+
+@media (max-width: 768px) {
+  .header-menu {
+    gap: 1.25rem;
+  }
+  .header-menu a {
+    background-color: #32383f;
+    padding: 0.75rem 1rem;
+    border-radius: 0.25rem;
+  }
+  .header-menu a:hover {
+    background-color: #424a53;
+  }
+
+  .header-menu a:after {
+    display: none;
+  }
 }

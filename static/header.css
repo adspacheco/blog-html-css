@@ -4,4 +4,11 @@
 
 .logo {
   color: #ffffff;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.logo span {
+  color: #2da44e;
+  font-weight: 900;
 }
